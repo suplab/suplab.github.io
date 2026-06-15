@@ -11,7 +11,7 @@
         body { font-family: 'Inter', system-ui, sans-serif; }
         .heading { font-family: 'Playfair Display', sans-serif; }
         .hero-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%);
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
         }
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -20,24 +20,27 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
+        .accent-purple {
+            color: #6b21a8;
+        }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-200">
+<body class="bg-zinc-50 text-zinc-900">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-md z-50 border-b border-zinc-800">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-zinc-200">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-xl flex items-center justify-center text-white font-bold text-xl">S</div>
-                <span class="text-2xl font-semibold tracking-tight">Suplab Debnath</span>
+                <div class="w-9 h-9 bg-gradient-to-br from-violet-600 to-purple-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">S</div>
+                <span class="text-xl font-semibold tracking-tight text-zinc-800"></span>
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#about" class="hover:text-emerald-400 transition-colors">About</a>
-                <a href="#projects" class="hover:text-emerald-400 transition-colors">Projects</a>
-                <a href="#expertise" class="hover:text-emerald-400 transition-colors">Expertise</a>
-                <a href="#fun" class="hover:text-emerald-400 transition-colors">Fun Facts</a>
-                <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+                <a href="#about" class="hover:text-violet-600 transition-colors">About</a>
+                <a href="#projects" class="hover:text-violet-600 transition-colors">Projects</a>
+                <a href="#expertise" class="hover:text-violet-600 transition-colors">Expertise</a>
+                <a href="#fun" class="hover:text-violet-600 transition-colors">Fun Facts</a>
+                <a href="#contact" class="hover:text-violet-600 transition-colors">Contact</a>
             </div>
-            <button onclick="toggleTheme()" class="p-2 hover:bg-zinc-800 rounded-xl transition-colors">
+            <button onclick="toggleTheme()" class="p-3 hover:bg-zinc-100 rounded-2xl transition-colors">
                 <i id="theme-icon" class="fas fa-moon text-xl"></i>
             </button>
         </div>
@@ -45,80 +48,77 @@
 
     <!-- Hero -->
     <section class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="inline-flex items-center gap-2 bg-zinc-900 border border-zinc-700 px-4 py-2 rounded-2xl mb-6">
-                    <span class="text-emerald-400">👋</span>
+        <div class="max-w-7xl mx-auto px-6 py-20">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-white border border-zinc-200 px-5 py-2.5 rounded-3xl mb-8 shadow-sm">
+                    <span class="text-violet-600">👋</span>
                     <span class="text-sm font-medium">Hello, I'm Suplab Debnath</span>
                 </div>
-                <h1 class="heading text-6xl md:text-7xl font-bold leading-tight mb-6">
-                    Java Cloud Solutions Architect &amp; <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">AI Enthusiast</span>
+                
+                <h1 class="heading text-6xl md:text-7xl font-bold leading-tight mb-8">
+                    Java Cloud Solutions Architect &amp; <span class="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">AI Enthusiast</span>
                 </h1>
-                <p class="text-xl text-zinc-400 max-w-lg mb-8">
-                    Passionate about building innovative, scalable solutions with AI/ML, Spring Boot, and Cloud technologies. Turning complex problems into elegant, enterprise-grade systems.
+                
+                <p class="text-xl text-zinc-600 max-w-2xl mx-auto mb-10">
+                    Passionate about building innovative, scalable solutions with AI/ML, Spring Boot, and Cloud technologies. 
+                    Turning complex problems into elegant, enterprise-grade systems.
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="bg-white text-zinc-900 px-8 py-4 rounded-2xl font-semibold flex items-center gap-3 hover:bg-emerald-400 hover:text-white transition-all group">
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#projects" class="bg-zinc-900 text-white px-8 py-4 rounded-3xl font-semibold flex items-center gap-3 hover:bg-violet-700 transition-all group">
                         Explore My Work
                         <i class="fas fa-arrow-right group-active:translate-x-1 transition"></i>
                     </a>
-                    <a href="https://linkedin.com/in/suplabdebnath" target="_blank" class="border border-zinc-700 hover:border-zinc-400 px-8 py-4 rounded-2xl font-medium flex items-center gap-3 transition-all">
+                    <a href="https://linkedin.com/in/suplabdebnath" target="_blank" class="border border-zinc-300 hover:border-violet-300 bg-white px-8 py-4 rounded-3xl font-medium flex items-center gap-3 transition-all">
                         <i class="fab fa-linkedin"></i> Connect on LinkedIn
                     </a>
                 </div>
-                <p class="mt-8 text-sm text-zinc-500 italic">"Not all those who wander are lost." — J.R.R. Tolkien</p>
-            </div>
-            <div class="flex justify-center">
-                <div class="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-3xl border border-zinc-700 flex items-center justify-center overflow-hidden">
-                    <div class="text-center">
-                        <div class="text-8xl mb-4">🧠</div>
-                        <div class="text-emerald-400 text-xl font-medium">Building the Future</div>
-                    </div>
-                </div>
+                
+                <p class="mt-12 text-sm text-zinc-500 italic">"Not all those who wander are lost." — J.R.R. Tolkien</p>
             </div>
         </div>
     </section>
 
     <!-- About -->
     <section id="about" class="max-w-7xl mx-auto px-6 py-24">
-        <h2 class="heading text-5xl font-bold mb-8 text-center">About Me</h2>
-        <div class="grid md:grid-cols-12 gap-12">
-            <div class="md:col-span-7 space-y-6 text-lg text-zinc-300">
+        <h2 class="heading text-5xl font-bold mb-10 text-center">About Me</h2>
+        <div class="grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 space-y-6 text-lg text-zinc-700">
                 <p>Driven hands-on leader delivering enterprise applications, cloud migrations, and digital transformations. I specialize in modernizing legacy systems into scalable, cloud-native architectures using Spring Boot, AWS, and Generative AI.</p>
                 <p>I am an advocate for AI/ML adoption to boost productivity, with deep focus on RAG, LangChain, fine-tuned LLMs, and responsible AI practices.</p>
-                <p class="text-emerald-400 font-medium">Location: Kolkata, West Bengal, India</p>
+                <p class="text-violet-700 font-medium">📍 Kolkata, West Bengal, India</p>
             </div>
-            <div class="md:col-span-5 bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-                <h3 class="font-semibold text-emerald-400 mb-4">Inspired by Middle-earth</h3>
-                <p class="italic text-zinc-400">"I explore new tech horizons to create impactful projects — weaving creativity and wisdom into every line of code."</p>
+            <div class="md:col-span-5 bg-white border border-zinc-200 rounded-3xl p-8 shadow-sm">
+                <h3 class="font-semibold text-violet-700 mb-4">Inspired by Middle-earth</h3>
+                <p class="italic text-zinc-600">"I explore new tech horizons to create impactful projects — weaving creativity and wisdom into every line of code."</p>
             </div>
         </div>
     </section>
 
     <!-- Expertise -->
-    <section id="expertise" class="bg-zinc-900 py-24">
+    <section id="expertise" class="bg-white py-24 border-t border-b border-zinc-100">
         <div class="max-w-7xl mx-auto px-6">
             <h2 class="heading text-5xl font-bold mb-12 text-center">Expertise</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="bg-zinc-950 border border-zinc-800 p-6 rounded-3xl card-hover">
-                    <i class="fas fa-brain text-4xl text-emerald-400 mb-4"></i>
-                    <h4 class="font-semibold text-xl">Generative AI &amp; ML</h4>
-                    <p class="text-sm text-zinc-400 mt-2">LLMs, Transformers, RAG, LangChain, Fine-tuning</p>
+                <div class="bg-white border border-zinc-200 p-8 rounded-3xl card-hover">
+                    <i class="fas fa-brain text-4xl text-violet-600 mb-6"></i>
+                    <h4 class="font-semibold text-2xl">Generative AI &amp; ML</h4>
+                    <p class="text-zinc-600 mt-3">LLMs, Transformers, RAG, LangChain, Fine-tuning</p>
                 </div>
-                <div class="bg-zinc-950 border border-zinc-800 p-6 rounded-3xl card-hover">
-                    <i class="fas fa-java text-4xl text-orange-500 mb-4"></i>
-                    <h4 class="font-semibold text-xl">Java &amp; Spring Boot</h4>
-                    <p class="text-sm text-zinc-400 mt-2">Microservices, Cloud-Native, GraphQL</p>
+                <div class="bg-white border border-zinc-200 p-8 rounded-3xl card-hover">
+                    <i class="fas fa-java text-4xl text-orange-600 mb-6"></i>
+                    <h4 class="font-semibold text-2xl">Java &amp; Spring Boot</h4>
+                    <p class="text-zinc-600 mt-3">Microservices, Cloud-Native, GraphQL</p>
                 </div>
-                <div class="bg-zinc-950 border border-zinc-800 p-6 rounded-3xl card-hover">
-                    <i class="fas fa-cloud text-4xl text-sky-400 mb-4"></i>
-                    <h4 class="font-semibold text-xl">Cloud Architecture</h4>
-                    <p class="text-sm text-zinc-400 mt-2">AWS, Migrations, Scalable Systems</p>
+                <div class="bg-white border border-zinc-200 p-8 rounded-3xl card-hover">
+                    <i class="fas fa-cloud text-4xl text-sky-600 mb-6"></i>
+                    <h4 class="font-semibold text-2xl">Cloud Architecture</h4>
+                    <p class="text-zinc-600 mt-3">AWS, Migrations, Scalable Systems</p>
                 </div>
-                <div class="bg-zinc-950 border border-zinc-800 p-6 rounded-3xl card-hover">
-                    <i class="fas fa-code text-4xl text-violet-400 mb-4"></i>
-                    <h4 class="font-semibold text-xl">Modern Engineering</h4>
-                    <p class="text-sm text-zinc-400 mt-2">Python, DevOps, AI-Augmented SDLC</p>
+                <div class="bg-white border border-zinc-200 p-8 rounded-3xl card-hover">
+                    <i class="fas fa-code text-4xl text-emerald-600 mb-6"></i>
+                    <h4 class="font-semibold text-2xl">Modern Engineering</h4>
+                    <p class="text-zinc-600 mt-3">Python, DevOps, AI-Augmented SDLC</p>
                 </div>
             </div>
         </div>
@@ -128,96 +128,92 @@
     <section id="projects" class="max-w-7xl mx-auto px-6 py-24">
         <div class="flex justify-between items-end mb-12">
             <h2 class="heading text-5xl font-bold">Featured Projects</h2>
-            <a href="https://github.com/suplab?tab=repositories" target="_blank" class="text-emerald-400 hover:underline flex items-center gap-2 text-sm font-medium">
+            <a href="https://github.com/suplab?tab=repositories" target="_blank" class="text-violet-600 hover:underline flex items-center gap-2 text-sm font-medium">
                 View All on GitHub <i class="fas fa-external-link-alt"></i>
             </a>
         </div>
         
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- EEIK -->
-            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden card-hover">
-                <div class="h-2 bg-gradient-to-r from-emerald-500 to-cyan-500"></div>
+            <div class="bg-white border border-zinc-200 rounded-3xl overflow-hidden card-hover">
+                <div class="h-2 bg-gradient-to-r from-violet-600 to-purple-600"></div>
                 <div class="p-8">
                     <h3 class="font-semibold text-2xl mb-3">EEIK — Enterprise Engineering Intelligence Kit</h3>
-                    <p class="text-zinc-400 mb-6">Bootstrap any project with governed AI engineering intelligence. 48+ agents, 18 capability packs, slash commands, and persistent memory for Claude, Copilot &amp; more.</p>
-                    <a href="https://suplab.github.io/eeik-bootstrap" target="_blank" class="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium">
+                    <p class="text-zinc-600 mb-6">Bootstrap any project with governed AI engineering intelligence. 48+ agents, 18 capability packs, slash commands, and persistent memory.</p>
+                    <a href="https://suplab.github.io/eeik-bootstrap" target="_blank" class="inline-flex items-center gap-2 text-violet-600 hover:text-violet-700 font-medium">
                         Visit Site <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
             </div>
 
             <!-- APEX -->
-            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden card-hover">
-                <div class="h-2 bg-gradient-to-r from-violet-500 to-fuchsia-500"></div>
+            <div class="bg-white border border-zinc-200 rounded-3xl overflow-hidden card-hover">
+                <div class="h-2 bg-gradient-to-r from-purple-600 to-fuchsia-600"></div>
                 <div class="p-8">
                     <h3 class="font-semibold text-2xl mb-3">APEX — AI-Powered Engineering eXperience</h3>
-                    <p class="text-zinc-400 mb-6">Enterprise AI SDLC framework that augments existing workflows. Reduces PR cycle time, boilerplate, and manual testing while maintaining governance.</p>
-                    <a href="https://suplab.github.io/apex-sdlc" target="_blank" class="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium">
+                    <p class="text-zinc-600 mb-6">Enterprise AI SDLC framework that augments existing workflows. Reduces PR cycle time and manual effort while maintaining strong governance.</p>
+                    <a href="https://suplab.github.io/apex-sdlc" target="_blank" class="inline-flex items-center gap-2 text-violet-600 hover:text-violet-700 font-medium">
                         Visit Site <i class="fas fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Aether Ecosystem -->
-            <div class="bg-zinc-900 border border-zinc-800 rounded-3xl overflow-hidden card-hover">
-                <div class="h-2 bg-gradient-to-r from-amber-500 to-orange-500"></div>
+            <div class="bg-white border border-zinc-200 rounded-3xl overflow-hidden card-hover">
+                <div class="h-2 bg-gradient-to-r from-amber-600 to-orange-600"></div>
                 <div class="p-8">
                     <h3 class="font-semibold text-2xl mb-3">Aether Ecosystem</h3>
-                    <p class="text-zinc-400 mb-6">Distributed cognitive computing platform with persistent memory, agent governance mesh, and human-centric intelligence.</p>
+                    <p class="text-zinc-600 mb-6">Distributed cognitive computing platform with persistent memory, agent governance, and human-centric intelligence.</p>
                     <div class="space-y-4 text-sm">
-                        <a href="https://suplab.github.io/aether" class="block text-emerald-400 hover:underline">→ Aether Hub</a>
-                        <a href="https://suplab.github.io/aether-core" class="block text-emerald-400 hover:underline">→ Aether Core</a>
-                        <a href="https://suplab.github.io/aether-grid" class="block text-emerald-400 hover:underline">→ Aether Grid</a>
+                        <a href="https://suplab.github.io/aether" class="block text-violet-600 hover:underline">→ Aether Hub</a>
+                        <a href="https://suplab.github.io/aether-iel" class="block text-violet-600 hover:underline">→ Aether Methodology</a>
+                        <a href="https://suplab.github.io/aether-core" class="block text-violet-600 hover:underline">→ Aether Core</a>
+                        <a href="https://suplab.github.io/aether-grid" class="block text-violet-600 hover:underline">→ Aether Grid</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Latest / Other Repos Suggestion -->
-        <div class="mt-16">
-            <h3 class="text-2xl font-semibold mb-6">More Projects &amp; Experiments</h3>
-            <p class="text-zinc-400 mb-8">Check out my <a href="https://github.com/suplab" target="_blank" class="text-emerald-400 hover:underline">GitHub profile</a> for the latest repositories, including quirky hackathon experiments like Thera-Burn (AI Therapist that roasts you) and TruthShield-AI.</p>
-            <div class="text-center">
-                <a href="https://github.com/suplab" target="_blank" class="inline-flex items-center gap-3 bg-zinc-800 hover:bg-zinc-700 px-10 py-4 rounded-2xl font-medium transition-colors">
-                    <i class="fab fa-github text-2xl"></i>
-                    Browse All Repositories
-                </a>
-            </div>
+        <div class="mt-16 text-center">
+            <a href="https://github.com/suplab" target="_blank" class="inline-flex items-center gap-3 bg-white border border-zinc-300 hover:border-violet-300 px-8 py-4 rounded-3xl font-medium transition-colors">
+                <i class="fab fa-github text-2xl"></i>
+                Browse All Repositories
+            </a>
         </div>
     </section>
 
     <!-- Fun Facts -->
-    <section id="fun" class="max-w-7xl mx-auto px-6 py-24 bg-zinc-900">
+    <section id="fun" class="max-w-7xl mx-auto px-6 py-24 bg-white border-t border-zinc-100">
         <h2 class="heading text-5xl font-bold mb-12 text-center">🌟 Fun Facts</h2>
         <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
-                <p class="text-zinc-300">I designed a Middle-earth themed business card with Elvish runes and a Tolkien quote.</p>
+            <div class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200">
+                <p class="text-zinc-700">I designed a Middle-earth themed business card with Elvish runes and a Tolkien quote.</p>
             </div>
-            <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
-                <p class="text-zinc-300">Favorite hackathon project: A carbon footprint tracker with AI-generated eco-puns.</p>
+            <div class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200">
+                <p class="text-zinc-700">Favorite hackathon project: A carbon footprint tracker with AI-generated eco-puns.</p>
             </div>
-            <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
-                <p class="text-zinc-300">When not coding, I'm shooting birds (with a camera — click!!!) or dreaming up the next quirky app.</p>
+            <div class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200">
+                <p class="text-zinc-700">When not coding, I'm shooting birds (with a camera — click!!!) or dreaming up the next quirky app.</p>
             </div>
-            <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800">
-                <p class="text-zinc-300">My favourite word is <span class="font-mono text-emerald-400">"onomatopoeia"</span>.</p>
+            <div class="bg-zinc-50 p-8 rounded-3xl border border-zinc-200">
+                <p class="text-zinc-700">My favourite word is <span class="font-semibold text-violet-700">"onomatopoeia"</span>.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="max-w-7xl mx-auto px-6 py-24 text-center">
-        <h2 class="heading text-5xl font-bold mb-8">Let's Build Something Extraordinary</h2>
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-24 text-center bg-zinc-900 text-white rounded-t-3xl">
+        <h2 class="heading text-5xl font-bold mb-6">Let's Build Something Extraordinary</h2>
         <p class="text-xl text-zinc-400 max-w-md mx-auto mb-12">Open to collaborations, speaking opportunities, or just a good tech discussion.</p>
         
-        <div class="flex flex-wrap justify-center gap-6 text-lg">
-            <a href="https://linkedin.com/in/suplabdebnath" target="_blank" class="flex items-center gap-3 hover:text-emerald-400 transition-colors">
+        <div class="flex flex-wrap justify-center gap-8 text-lg">
+            <a href="https://linkedin.com/in/suplabdebnath" target="_blank" class="flex items-center gap-3 hover:text-violet-400 transition-colors">
                 <i class="fab fa-linkedin text-3xl"></i> LinkedIn
             </a>
-            <a href="mailto:doubts.reiterate699@passinbox.com" class="flex items-center gap-3 hover:text-emerald-400 transition-colors">
+            <a href="mailto:doubts.reiterate699@passinbox.com" class="flex items-center gap-3 hover:text-violet-400 transition-colors">
                 <i class="fas fa-envelope text-3xl"></i> Email
             </a>
-            <a href="https://x.com/beingsuplab" target="_blank" class="flex items-center gap-3 hover:text-emerald-400 transition-colors">
+            <a href="https://x.com/beingsuplab" target="_blank" class="flex items-center gap-3 hover:text-violet-400 transition-colors">
                 <i class="fab fa-x-twitter text-3xl"></i> X / Twitter
             </a>
         </div>
@@ -228,21 +224,20 @@
     </section>
 
     <script>
-        // Tailwind script already loaded
         function toggleTheme() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                document.getElementById('theme-icon').classList.remove('fa-sun');
-                document.getElementById('theme-icon').classList.add('fa-moon');
+            const isDark = document.documentElement.classList.toggle('dark');
+            const icon = document.getElementById('theme-icon');
+            if (isDark) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
             } else {
-                document.documentElement.classList.add('dark');
-                document.getElementById('theme-icon').classList.remove('fa-moon');
-                document.getElementById('theme-icon').classList.add('fa-sun');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
             }
         }
         
-        // Simple scroll progress or other enhancements can be added here
-        console.log("%c✅ Suplab's GitHub Pages ready!", "color: #10b981; font-weight: bold");
+        // Auto light theme by default
+        console.log("%c✅ Suplab's GitHub Pages ready!", "color: #7c3aed; font-weight: bold");
     </script>
 </body>
 </html>
